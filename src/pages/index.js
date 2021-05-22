@@ -19,7 +19,7 @@ export default function Home({ products }) {
 
         {/* ProductFeed */}
         <ProductFeed products={products} />
-        {/* <p>{products}</p> */}
+        
       </main>
     </div>
   );
