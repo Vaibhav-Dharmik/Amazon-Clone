@@ -6,7 +6,7 @@ import Order from "../components/Order";
 
 function Orders({ orders }) {
   const [session] = useSession();
-  console.log(orders);
+  // console.log(orders);
 
   return (
     <div>
@@ -44,7 +44,7 @@ function Orders({ orders }) {
 export default Orders;
 
 export async function getServerSideProps(context) {
-  const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+  const stripe = require("stripe")(`${process.env.STRIPE_SECRET_KEY}`);
 
   //   Get the users logged in credentials
   const session = await getSession(context);
